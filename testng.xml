@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd">
+
+<suite name="AutomationExerciseSuite">
+
+    <listeners>
+        <listener class-name="utilities.Listeners"/>
+    </listeners>
+
+    <test name="AutomationExerciseTests">
+        <classes>
+
+            <class name="testcases.LoginTest"/>
+            <class name="testcases.SignupTest"/>
+            <class name="testcases.ProductsTest"/>
+            <class name="testcases.CartTest"/>
+            <class name="testcases.CheckoutTest"/>
+            <class name="testcases.ContactUsTest"/>
+            <class name="testcases.OrderTest"/>
+
+        </classes>
+    </test>
+</suite>
