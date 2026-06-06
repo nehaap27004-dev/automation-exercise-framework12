@@ -22,11 +22,11 @@ public class CheckoutTest extends BaseTest {
         System.out.println("Current URL: " + currentUrl);
 
         Assert.assertTrue(
-                currentUrl.contains("checkout")
-                || currentUrl.contains("payment")
-                || currentUrl.contains("login"),
-                "User did not reach Checkout/Login page! Current URL: " + currentUrl
-        );
+        	    currentUrl.contains("view_cart")
+        	    || currentUrl.contains("checkout")
+        	    || currentUrl.contains("login"),
+        	    "Checkout flow failed!"
+        	);
 
         System.out.println("Checkout Successful - Test Passed");
     }

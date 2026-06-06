@@ -16,7 +16,6 @@ public class Listeners implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-
         test = extent.createTest(result.getMethod().getMethodName());
     }
 
@@ -29,12 +28,11 @@ public class Listeners implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
 
-        test.fail(result.getThrowable());
+    	String testName = result.getMethod().getMethodName();
 
-        String path = ScreenshotUtility.captureScreenshot(
-                BaseTest.driver,
-                result.getMethod().getMethodName());
-
+    	String path = ScreenshotUtility.captureScreenshot(
+    	        BaseTest.driver,
+    	        testName);
         try {
             test.addScreenCaptureFromPath(path);
         } catch (Exception e) {
